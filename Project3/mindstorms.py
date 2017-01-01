@@ -20,6 +20,18 @@ def draw_circle():
 	angie.shape("arrow")
 	angie.circle(50)
 
+def draw_triangle():
+	marc = turtle.Turtle()
+
+	marc.color("yellow")
+	marc.shape("circle")
+	
+	marc.forward(100)
+	marc.right(120)
+	marc.forward(100)
+	marc.right(120)
+	marc.forward(100)
+
 
 def main():
         window = turtle.Screen()
@@ -27,6 +39,7 @@ def main():
 
         draw_square()
         draw_circle()
+        draw_triangle()
 
         window.exitonclick()
 
