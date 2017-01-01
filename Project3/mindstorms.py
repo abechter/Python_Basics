@@ -1,16 +1,15 @@
 import turtle
 
-def draw_square():
-	brad = turtle.Turtle()
-
-	brad.color("green")
-	brad.shape("turtle")
-	brad.speed(3)
+def draw_square(some_turtle):
+	
+	some_turtle.color("green")
+	some_turtle.shape("turtle")
+	some_turtle.speed(3)
 
 	i = 0
 	while (i < 4): 
-		brad.forward(100)
-		brad.right(90)
+		some_turtle.forward(100)
+		some_turtle.right(90)
 		i = i + 1
 
 def draw_circle():
@@ -36,10 +35,15 @@ def draw_triangle():
 def main():
         window = turtle.Screen()
         window.bgcolor("red")
+        brad = turtle.Turtle()
 
-        draw_square()
+        draw_square(brad)
         draw_circle()
         draw_triangle()
+
+        for a in range (1,37):
+                draw_square(brad)
+                brad.right(10)
 
         window.exitonclick()
 
